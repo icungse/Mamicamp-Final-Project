@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6975E705A021273181010B3A /* Pods_Mamicam_Final_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8486A953E6726EFFE4372800 /* Pods_Mamicam_Final_Project.framework */; };
 		FE4E5B08227A419200AFF567 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4E5B07227A419200AFF567 /* AppDelegate.swift */; };
 		FE4E5B0A227A419200AFF567 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4E5B09227A419200AFF567 /* ViewController.swift */; };
 		FE4E5B0D227A419200AFF567 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE4E5B0B227A419200AFF567 /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1CD0A3018576C9A831D4E695 /* Pods-Mamicam Final Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mamicam Final Project.release.xcconfig"; path = "Target Support Files/Pods-Mamicam Final Project/Pods-Mamicam Final Project.release.xcconfig"; sourceTree = "<group>"; };
+		8486A953E6726EFFE4372800 /* Pods_Mamicam_Final_Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mamicam_Final_Project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		95E3725FA76420D685F50AA5 /* Pods-Mamicam Final Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mamicam Final Project.debug.xcconfig"; path = "Target Support Files/Pods-Mamicam Final Project/Pods-Mamicam Final Project.debug.xcconfig"; sourceTree = "<group>"; };
 		FE4E5B04227A419200AFF567 /* Mamicam Final Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mamicam Final Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE4E5B07227A419200AFF567 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE4E5B09227A419200AFF567 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6975E705A021273181010B3A /* Pods_Mamicam_Final_Project.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA47ACB36E8272740160DA44 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				95E3725FA76420D685F50AA5 /* Pods-Mamicam Final Project.debug.xcconfig */,
+				1CD0A3018576C9A831D4E695 /* Pods-Mamicam Final Project.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E4E5ACD44113BC45D34928EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8486A953E6726EFFE4372800 /* Pods_Mamicam_Final_Project.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FE4E5AFB227A419200AFF567 = {
 			isa = PBXGroup;
 			children = (
 				FE4E5B06227A419200AFF567 /* Mamicam Final Project */,
 				FE4E5B05227A419200AFF567 /* Products */,
+				DA47ACB36E8272740160DA44 /* Pods */,
+				E4E5ACD44113BC45D34928EE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +96,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FE4E5B16227A419300AFF567 /* Build configuration list for PBXNativeTarget "Mamicam Final Project" */;
 			buildPhases = (
+				63C870D16A9E50FE49DB8136 /* [CP] Check Pods Manifest.lock */,
 				FE4E5B00227A419200AFF567 /* Sources */,
 				FE4E5B01227A419200AFF567 /* Frameworks */,
 				FE4E5B02227A419200AFF567 /* Resources */,
+				617179883C6EEB5D5548850A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,59 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		617179883C6EEB5D5548850A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mamicam Final Project/Pods-Mamicam Final Project-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire-SwiftyJSON/Alamofire_SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire_SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mamicam Final Project/Pods-Mamicam Final Project-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		63C870D16A9E50FE49DB8136 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mamicam Final Project-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FE4E5B00227A419200AFF567 /* Sources */ = {
@@ -280,6 +360,7 @@
 		};
 		FE4E5B17227A419300AFF567 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95E3725FA76420D685F50AA5 /* Pods-Mamicam Final Project.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +379,7 @@
 		};
 		FE4E5B18227A419300AFF567 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CD0A3018576C9A831D4E695 /* Pods-Mamicam Final Project.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
