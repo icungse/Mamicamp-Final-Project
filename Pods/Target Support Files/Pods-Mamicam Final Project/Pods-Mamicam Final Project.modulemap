@@ -1,0 +1,6 @@
+framework module Pods_Mamicam_Final_Project {
+  umbrella header "Pods-Mamicam Final Project-umbrella.h"
+
+  export *
+  module * { export * }
+}
