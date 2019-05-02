@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6975E705A021273181010B3A /* Pods_Mamicam_Final_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8486A953E6726EFFE4372800 /* Pods_Mamicam_Final_Project.framework */; };
 		FE10BA14227AE68500E0B431 /* AnyViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE10BA13227AE68500E0B431 /* AnyViewExtension.swift */; };
+		FE10BA18227B259500E0B431 /* DetailKostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE10BA17227B259500E0B431 /* DetailKostViewModel.swift */; };
 		FE4E5B08227A419200AFF567 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4E5B07227A419200AFF567 /* AppDelegate.swift */; };
 		FE4E5B0A227A419200AFF567 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4E5B09227A419200AFF567 /* ViewController.swift */; };
 		FE4E5B0D227A419200AFF567 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE4E5B0B227A419200AFF567 /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 		8486A953E6726EFFE4372800 /* Pods_Mamicam_Final_Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mamicam_Final_Project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95E3725FA76420D685F50AA5 /* Pods-Mamicam Final Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mamicam Final Project.debug.xcconfig"; path = "Target Support Files/Pods-Mamicam Final Project/Pods-Mamicam Final Project.debug.xcconfig"; sourceTree = "<group>"; };
 		FE10BA13227AE68500E0B431 /* AnyViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyViewExtension.swift; sourceTree = "<group>"; };
+		FE10BA17227B259500E0B431 /* DetailKostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailKostViewModel.swift; sourceTree = "<group>"; };
 		FE4E5B04227A419200AFF567 /* Mamicam Final Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mamicam Final Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE4E5B07227A419200AFF567 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE4E5B09227A419200AFF567 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				FED68B7E227A5314008A40A2 /* KostViewModel.swift */,
+				FE10BA17227B259500E0B431 /* DetailKostViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 				FE4E5B0A227A419200AFF567 /* ViewController.swift in Sources */,
 				FED68B7F227A5314008A40A2 /* KostViewModel.swift in Sources */,
 				FE4E5B08227A419200AFF567 /* AppDelegate.swift in Sources */,
+				FE10BA18227B259500E0B431 /* DetailKostViewModel.swift in Sources */,
 				FED68B71227A44A4008A40A2 /* NetworkFacade.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
