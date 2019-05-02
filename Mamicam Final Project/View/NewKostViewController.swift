@@ -35,6 +35,10 @@ class NewKostViewController: UIViewController {
             NetworkFacade.callPostApi(url: url, parameters: parameters as [String : Any]) { json in
                 print(json)
             }
+        } else {
+            let alert = UIAlertController(title: "Kost Gagal Disimpan", message: "Periksa kembali form yang diisi. Pastikan form terisi dan panjang karakter lebih dari 3", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            self.present(alert, animated: true)
         }
         
     }
