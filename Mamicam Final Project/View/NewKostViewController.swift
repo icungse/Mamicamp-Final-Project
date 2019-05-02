@@ -9,22 +9,52 @@
 import UIKit
 
 class NewKostViewController: UIViewController {
+    
+    let url = "https://esjeruks.com/api-mamicamp/public/api/room"
+    
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var priceTextField: UITextField!
+    @IBOutlet weak var typeSegemntedControl: UISegmentedControl!
+    @IBOutlet weak var categoryTextField: UITextField!
+    @IBOutlet weak var descriptionTextFIeld: UITextField!
+    @IBOutlet weak var saveButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func saveClicked(_ sender: Any) {
+        if isValidate() {
+            let parameters = [
+                "name": nameTextField.text,
+                "description": descriptionTextFIeld.text,
+                "type": typeSegemntedControl.titleForSegment(at: typeSegemntedControl.selectedSegmentIndex),
+                "price": priceTextField.text,
+                "category": categoryTextField.text
+            ]
+            NetworkFacade.callPostApi(url: url, parameters: parameters as [String : Any]) { json in
+                print(json)
+            }
+        }
+        
     }
-    */
-
+    
+    func isValidate() -> Bool {
+        var isValid = true
+        if nameTextField.text?.isEmpty == true || (nameTextField.text?.count)! < 3 {
+            isValid = false
+        }
+        
+        if descriptionTextFIeld.text?.isEmpty == true || (descriptionTextFIeld.text?.count)! < 3 {
+            isValid = false
+        }
+        
+        if priceTextField.text?.isEmpty == true || (priceTextField.text?.count)! < 3 {
+            isValid = false
+        }
+        
+        return isValid
+    }
+    
+    
 }
