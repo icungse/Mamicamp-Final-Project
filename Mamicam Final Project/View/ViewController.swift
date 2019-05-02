@@ -36,12 +36,9 @@ class ViewController: UIViewController {
         roundButton = UIButton(type: .custom)
         roundButton.translatesAutoresizingMaskIntoConstraints = false
         roundButton.backgroundColor = UIColor.red
-        // Make sure you replace the name of the image:
         roundButton.setTitle("+", for: .normal)
         roundButton.titleLabel?.font = .systemFont(ofSize: 30)
-        // Make sure to create a function and replace DOTHISONTAP with your own function:
-        
-        // We're manipulating the UI, must be on the main thread:
+        roundButton.addTarget(self, action: #selector(newKost), for: UIControl.Event.touchUpInside)
         DispatchQueue.main.async {
             if let keyWindow = UIApplication.shared.keyWindow {
                 keyWindow.addSubview(self.roundButton)
@@ -51,9 +48,7 @@ class ViewController: UIViewController {
                     self.roundButton.widthAnchor.constraint(equalToConstant: 75),
                     self.roundButton.heightAnchor.constraint(equalToConstant: 75)])
             }
-            // Make the button round:
             self.roundButton.layer.cornerRadius = 37.5
-            // Add a black shadow:
             self.roundButton.layer.shadowColor = UIColor.black.cgColor
             self.roundButton.layer.shadowOffset = CGSize(width: 0.0, height: 5.0)
             self.roundButton.layer.masksToBounds = false
@@ -63,8 +58,24 @@ class ViewController: UIViewController {
         }
     }
     
+    @objc func newKost() {
+        if let controller = self.storyboard?.instantiateViewController(withIdentifier: "NewKostViewController") as? NewKostViewController {
+            self.show(controller, sender: self)
+        } else {
+            print("NewKostViewController not found")
+        }
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         floatingButton()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        if roundButton.superview != nil {
+            DispatchQueue.main.async {
+                self.roundButton.removeFromSuperview()
+            }
+        }
     }
 
 

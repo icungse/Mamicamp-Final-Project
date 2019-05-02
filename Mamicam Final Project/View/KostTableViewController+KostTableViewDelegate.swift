@@ -11,7 +11,7 @@ import UIKit
 
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath) as! KostTableViewCell
+        
         if let controller = self.storyboard?.instantiateViewController(withIdentifier: "DetailKostViewController") as? DetailKostViewController {
             controller.kostModel = self.kostViewModel.listKost[indexPath.row]
             controller.title = self.kostViewModel.listKost[indexPath.row].name
