@@ -23,6 +23,7 @@ class ViewController: UIViewController {
         kostTableView = UITableView(frame: CGRect(x: 0, y: barHeight, width: displayWidth, height: displayHeight-barHeight))
         kostTableView.register(UINib.init(nibName: "KostTableViewCell", bundle: nil), forCellReuseIdentifier: "KostTableViewCell")
         kostTableView.dataSource = self
+        kostTableView.delegate = self
         self.view.addSubview(kostTableView)
         
         
