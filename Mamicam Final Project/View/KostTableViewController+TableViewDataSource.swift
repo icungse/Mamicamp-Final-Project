@@ -17,6 +17,7 @@ extension ViewController: UITableViewDataSource {
         cell.detailKostLabel.text = self.kostViewModel.listKost[indexPath.row].type
         cell.priceKostLabel.text = " - " + self.kostViewModel.listKost[indexPath.row].price
         cell.categoryKostLabel.text = self.kostViewModel.listKost[indexPath.row].category
+        cell.kostImageVIew.loadImageUrl(url: self.kostViewModel.listKost[indexPath.row].image_url)
         
         return cell
     }
