@@ -10,7 +10,7 @@ import Foundation
 import SwiftyJSON
 
 class KostModel {
-    let baseUrl = "https://esjeruks.com/api-mamicamp/public/api/room"
+    var baseUrl = "https://esjeruks.com/api-mamicamp/public/api/room"
     
     var id : String = ""
     var name : String = ""

@@ -15,6 +15,11 @@
 		FE4E5B12227A419300AFF567 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE4E5B10227A419300AFF567 /* LaunchScreen.storyboard */; };
 		FED68B71227A44A4008A40A2 /* NetworkFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED68B70227A44A4008A40A2 /* NetworkFacade.swift */; };
 		FED68B76227A47E0008A40A2 /* KostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED68B75227A47E0008A40A2 /* KostModel.swift */; };
+		FED68B7A227A4D74008A40A2 /* KostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED68B78227A4D74008A40A2 /* KostTableViewCell.swift */; };
+		FED68B7B227A4D74008A40A2 /* KostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FED68B79227A4D74008A40A2 /* KostTableViewCell.xib */; };
+		FED68B7F227A5314008A40A2 /* KostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED68B7E227A5314008A40A2 /* KostViewModel.swift */; };
+		FED68B81227A566D008A40A2 /* KostTableViewController+TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED68B80227A566D008A40A2 /* KostTableViewController+TableViewDataSource.swift */; };
+		FED68B83227A585B008A40A2 /* KostTableViewController+KostTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED68B82227A585B008A40A2 /* KostTableViewController+KostTableViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +35,11 @@
 		FE4E5B13227A419300AFF567 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FED68B70227A44A4008A40A2 /* NetworkFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkFacade.swift; sourceTree = "<group>"; };
 		FED68B75227A47E0008A40A2 /* KostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KostModel.swift; sourceTree = "<group>"; };
+		FED68B78227A4D74008A40A2 /* KostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KostTableViewCell.swift; sourceTree = "<group>"; };
+		FED68B79227A4D74008A40A2 /* KostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KostTableViewCell.xib; sourceTree = "<group>"; };
+		FED68B7E227A5314008A40A2 /* KostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KostViewModel.swift; sourceTree = "<group>"; };
+		FED68B80227A566D008A40A2 /* KostTableViewController+TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KostTableViewController+TableViewDataSource.swift"; sourceTree = "<group>"; };
+		FED68B82227A585B008A40A2 /* KostTableViewController+KostTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KostTableViewController+KostTableViewDelegate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,10 +92,11 @@
 		FE4E5B06227A419200AFF567 /* Mamicam Final Project */ = {
 			isa = PBXGroup;
 			children = (
+				FED68B77227A4D51008A40A2 /* View */,
 				FED68B74227A47C9008A40A2 /* Model */,
 				FED68B6F227A448C008A40A2 /* Network */,
+				FED68B7C227A52A3008A40A2 /* ViewModel */,
 				FE4E5B07227A419200AFF567 /* AppDelegate.swift */,
-				FE4E5B09227A419200AFF567 /* ViewController.swift */,
 				FE4E5B0B227A419200AFF567 /* Main.storyboard */,
 				FE4E5B0E227A419300AFF567 /* Assets.xcassets */,
 				FE4E5B10227A419300AFF567 /* LaunchScreen.storyboard */,
@@ -108,6 +119,26 @@
 				FED68B75227A47E0008A40A2 /* KostModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FED68B77227A4D51008A40A2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FE4E5B09227A419200AFF567 /* ViewController.swift */,
+				FED68B78227A4D74008A40A2 /* KostTableViewCell.swift */,
+				FED68B79227A4D74008A40A2 /* KostTableViewCell.xib */,
+				FED68B80227A566D008A40A2 /* KostTableViewController+TableViewDataSource.swift */,
+				FED68B82227A585B008A40A2 /* KostTableViewController+KostTableViewDelegate.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FED68B7C227A52A3008A40A2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FED68B7E227A5314008A40A2 /* KostViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +203,7 @@
 			files = (
 				FE4E5B12227A419300AFF567 /* LaunchScreen.storyboard in Resources */,
 				FE4E5B0F227A419300AFF567 /* Assets.xcassets in Resources */,
+				FED68B7B227A4D74008A40A2 /* KostTableViewCell.xib in Resources */,
 				FE4E5B0D227A419200AFF567 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -236,8 +268,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FED68B83227A585B008A40A2 /* KostTableViewController+KostTableViewDelegate.swift in Sources */,
+				FED68B81227A566D008A40A2 /* KostTableViewController+TableViewDataSource.swift in Sources */,
 				FED68B76227A47E0008A40A2 /* KostModel.swift in Sources */,
+				FED68B7A227A4D74008A40A2 /* KostTableViewCell.swift in Sources */,
 				FE4E5B0A227A419200AFF567 /* ViewController.swift in Sources */,
+				FED68B7F227A5314008A40A2 /* KostViewModel.swift in Sources */,
 				FE4E5B08227A419200AFF567 /* AppDelegate.swift in Sources */,
 				FED68B71227A44A4008A40A2 /* NetworkFacade.swift in Sources */,
 			);
