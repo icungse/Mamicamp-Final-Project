@@ -26,10 +26,10 @@
             </objects>
             <point key="canvasLocation" x="1076" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail Kost View Controller-->
         <scene sceneID="LTn-1i-Tic">
             <objects>
-                <viewController id="wrG-ea-jLO" sceneMemberID="viewController">
+                <viewController restorationIdentifier="DetailKostViewController" storyboardIdentifier="DetailKostViewController" id="wrG-ea-jLO" customClass="DetailKostViewController" customModule="Mamicam_Final_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="79O-TF-tBx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -93,6 +93,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Rfd-k8-8c5"/>
                     </view>
+                    <connections>
+                        <outlet property="categoryTextLabel" destination="kZY-ui-DEt" id="o0C-nl-K56"/>
+                        <outlet property="descriptionTextLabel" destination="xnC-Ar-DOq" id="MVM-7P-2QO"/>
+                        <outlet property="detailTextLabel" destination="DWP-iZ-em2" id="wlB-Jk-fZT"/>
+                        <outlet property="kostImageView" destination="d6N-EM-agW" id="LN9-Sx-vhV"/>
+                        <outlet property="nameTextLabel" destination="gnX-ea-4NA" id="Avr-Wv-oto"/>
+                        <outlet property="priceTextLabel" destination="fcu-PO-a51" id="68Q-mK-djw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vE9-Fu-Lvi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
