@@ -22,4 +22,18 @@ class NetworkFacade {
                 callback(value)
         }
     }
+    
+    static func callPostApi(url: String, parameters: [String: Any] = [:], callback: @escaping (JSON) -> ()) {
+        let header: HTTPHeaders = ["Content-Type": "application/json"]
+        print("post Param \(parameters)")
+        Alamofire.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: header) .responseSwiftyJSON { (responseData) in
+            print("response \(responseData)")
+            guard let value = responseData.result.value else {
+                return
+            }
+            callback(value)
+            
+        }
+        
+    }
 }
